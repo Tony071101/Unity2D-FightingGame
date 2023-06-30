@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -24,11 +25,11 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(cantAttack == true)
+                if (cantAttack == true)
                 {
                     Attack();
                     nextAttackTime = Time.time + 2f / attackRate;
@@ -72,14 +73,15 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D player in hitPlayer)
         {
             player.GetComponent<Player2>().TakeDMG(attackDmg);
-            if(player1.currentBar < player1.maxBar)
+            if (player1.currentBar < player1.maxBar)
             {
                 player1.currentBar += 10;
                 player1.skillBar.SetSkill(player1.currentBar);
             }
         }
-        
+
     }
+
     public void SkillAttack()
     {
         animator.SetTrigger("Attack2");
@@ -109,6 +111,6 @@ public class PlayerCombat : MonoBehaviour
         if (attackPoint == null)
             return;
 
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);    
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -16,13 +16,11 @@ public class Timer : MonoBehaviour
     [SerializeField] Player2 player2;
     [SerializeField] PlayerCombat playerCombat;
     [SerializeField] Player2Combat player2Combat;
-    [SerializeField] MoveASWD movePlayer;
-    [SerializeField] MoveArrows movePlayer2;
     [SerializeField] Enemy enemy;
     public bool notdie = true;
     private void FixedUpdate()
     {
-        if(notdie == true)
+        if (notdie == true)
         {
             if (WaitSec > 0)
             {
@@ -35,8 +33,6 @@ public class Timer : MonoBehaviour
                 retryUI.SetActive(true);
                 playerCombat.cantAttack = false;
                 player2Combat.cantAttack = false;
-                movePlayer.cantMove = false;
-                movePlayer2.cantMove2 = false;
                 enemy.cantMove = false;
                 enemy.cantAtttack = false;
                 Score();
@@ -51,7 +47,7 @@ public class Timer : MonoBehaviour
     {
         if (player.currentHealth > player2.currentHealth)
         {
-            text2.text = "Player " + Player2.playernamestr +" win!";
+            text2.text = "Player " + Player2.playernamestr + " win!";
         }
         if (player.currentHealth < player2.currentHealth)
         {

@@ -21,8 +21,6 @@ public class InputName : MonoBehaviour
     [SerializeField] CountDown cd;
     [SerializeField] Timer time;
     [SerializeField] PauseMenu pauseMenu;
-    [SerializeField] MoveASWD moveASWD;
-    [SerializeField] MoveArrows moveArrows;
     void Start()
     {
         inputNameUI.SetActive(true);
@@ -37,8 +35,6 @@ public class InputName : MonoBehaviour
         cd.enabled = false;
         time.enabled = false;
         pauseMenu.enabled = false;
-        moveArrows.enabled = false;
-        moveASWD.enabled = false;
     }
 
     // Update is called once per frame
@@ -61,7 +57,5 @@ public class InputName : MonoBehaviour
         cd.enabled = true;
         time.enabled = true;
         pauseMenu.enabled = true;
-        moveASWD.enabled = true;
-        moveArrows.enabled = true;
     }
 }

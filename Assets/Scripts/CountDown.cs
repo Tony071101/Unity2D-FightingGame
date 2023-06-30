@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
     [SerializeField] PlayerCombat player;
     [SerializeField] Player2Combat player2;
-    [SerializeField] MoveArrows move;
-    [SerializeField] MoveASWD move2;
     [SerializeField] Timer time;
     [SerializeField] Enemy enemy;
     //[SerializeField] EnemyMove enemyMove;
@@ -26,14 +24,12 @@ public class CountDown : MonoBehaviour
             time.enabled = false;
             player.enabled = false;
             player2.enabled = false;
-            move.enabled = false;
-            move2.enabled = false;
             enemy.enabled = false;
             //enemyMove.enabled = false;
             WaitSec -= Time.fixedDeltaTime;
             WaitSecInt = (int)WaitSec;
             text.text = WaitSecInt.ToString();
-            if(text.text == "1")
+            if (text.text == "1")
             {
                 text.text = "Ready?";
             }
@@ -47,8 +43,6 @@ public class CountDown : MonoBehaviour
             time.enabled = true;
             player.enabled = true;
             player2.enabled = true;
-            move.enabled = true;
-            move2.enabled = true;
             enemy.enabled = true;
             //enemyMove.enabled = true;
             cdUI.SetActive(false);

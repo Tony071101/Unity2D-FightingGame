@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] PlayerCombat combat;
-    [SerializeField] MoveASWD playerMove;
     [SerializeField] Timer time;
     public SkillBar skillBar;
     private Animator animator;
@@ -132,6 +131,5 @@ public class Enemy : MonoBehaviour
         cantAtttack = false;
         cantMove = false;
         combat.cantAttack = false;
-        playerMove.cantMove = false;
     }
 }
