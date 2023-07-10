@@ -9,7 +9,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] Player player1;
     public Animator animator;
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    private float attackRange = 0f;
     public LayerMask enemyLayers;
     public LayerMask playerLayers;
     public int attackDmg;
@@ -54,6 +54,7 @@ public class PlayerCombat : MonoBehaviour
             canuse = false;
         }
     }
+
     public void Attack()
     {
         animator.SetTrigger("Attack");
@@ -106,7 +107,8 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-    void OnDrawGizmosSelected()
+
+    private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
             return;

@@ -104,7 +104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 1000
-  m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.1
   m_AirControl: 1
   m_WhatIsGround:
@@ -180,7 +179,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!95 &2003678728659542413
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -197,7 +196,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2003678728659542423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +218,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  combat: {fileID: 0}
+  time: {fileID: 0}
   skillBar: {fileID: 0}
   maxHealth: 250
   maxBar: 100

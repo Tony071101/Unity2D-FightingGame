@@ -6,7 +6,7 @@ public abstract class PlayerBase : MonoBehaviour
 {
     protected CharacterController2D characterController2D;
     protected float moveX;
-    protected bool jump = false;
+    protected bool jump;
     protected float Speed = 50f;
 
     protected abstract void onMoving();
