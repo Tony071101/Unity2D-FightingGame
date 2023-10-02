@@ -1,3 +1,4 @@
+# You can download and try the game at itch.io linked in my profile.
 # Unity2D-FightingGame
 # The game have 2 mode: PvP and PvE.
 # PvP each player use different button keys:
