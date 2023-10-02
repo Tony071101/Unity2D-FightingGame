@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1883942028907624232}
   - component: {fileID: 1883942028907624233}
   - component: {fileID: 1883942028907624234}
-  - component: {fileID: 1883942028907624235}
   - component: {fileID: 1883942028907624228}
   - component: {fileID: 1883942028907624229}
   - component: {fileID: 1883942028907624231}
@@ -115,22 +114,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1883942028907624235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883942028907624238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cff2098775046444846cd64c294fb6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller2D: {fileID: 1883942028907624229}
-  Speed: 50
-  animator: {fileID: 1883942028907624231}
-  cantMove2: 0
 --- !u!61 &1883942028907624228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -170,7 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 1200
-  m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.1
   m_AirControl: 1
   m_WhatIsGround:
@@ -182,7 +164,7 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1883942028907624235}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MoveArrows, Assembly-CSharp
         m_MethodName: Landing
         m_Mode: 1
@@ -199,7 +181,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!95 &1883942028907624231
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -216,7 +198,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1883942028907624225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,20 +235,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb56cd70e8351934299fca6c77543f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveArrows: {fileID: 1883942028907624235}
   combat2: {fileID: 1883942028907624225}
   combat: {fileID: 0}
-  moveASWD: {fileID: 0}
   animator: {fileID: 1883942028907624231}
   maxHealth: 250
   maxBar: 100
   minBar: 0
   currentHealth: 0
   currentBar: 0
+  time: {fileID: 0}
   healthBar: {fileID: 0}
   skillBar: {fileID: 0}
   retryUI: {fileID: 0}
-  text: {fileID: 0}
+  playerName: {fileID: 0}
+  block: 0
 --- !u!1 &1883942029904442378
 GameObject:
   m_ObjectHideFlags: 0
